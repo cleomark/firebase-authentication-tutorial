@@ -1,0 +1,45 @@
+<div class="w-full h-full flex justify-center items-center py-12">
+  <form class="w-full max-w-md space-y-5" (ngSubmit)="signUp()">
+    <mat-form-field appearance="fill" class="w-full">
+      <mat-label>Email</mat-label>
+      <input matInput [(ngModel)]="email" name="email" required />
+    </mat-form-field>
+
+    <mat-form-field appearance="fill" class="w-full">
+      <mat-label>Password</mat-label>
+      <input
+        matInput
+        [(ngModel)]="password"
+        type="password"
+        name="password"
+        required
+      />
+    </mat-form-field>
+
+    <mat-form-field appearance="fill" class="w-full">
+      <mat-label>Confirm Password</mat-label>
+      <input
+        matInput
+        [(ngModel)]="confirmPassword"
+        type="password"
+        name="confirmPassword"
+        required
+      />
+    </mat-form-field>
+
+    <div class="flex flex-col items-center gap-2">
+      <button mat-raised-button color="primary" type="submit" class="w-full">
+        Sign Up
+      </button>
+      <button
+        mat-stroked-button
+        color="accent"
+        class="w-full"
+        type="button"
+        (click)="goToLogin()"
+      >
+        Already have an account? Login
+      </button>
+    </div>
+  </form>
+</div>
